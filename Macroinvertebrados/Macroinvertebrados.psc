@@ -17,6 +17,12 @@ Algoritmo Macroinvertebrados
 	Escribir "4. Densidad de individuos por volumen"
 	Escribir "Digite su selección: "
 	Leer UsuarioEscoge
+	Si UsuarioEscoge < 0 o UsuarioEscoge > 4 Entonces
+	Repetir
+	Escribir "Escoja de nuevo un valor entre 1 y 4 y digítelo:"
+	Leer UsuarioEscoge
+	Hasta Que UsuarioEscoge > 0 y UsuarioEscoge < 5
+	FinSi
 	Si UsuarioEscoge == 1 Entonces
 		Escribir "¿Cuál es el número de mortipos contados en la muestra?"
 		Leer Mft
@@ -49,9 +55,5 @@ Algoritmo Macroinvertebrados
 		D_IndV= Ind/V  //Cálculo de densidad individuos por voluemn
 		Escribir "El resultado de la cantidad de individuos por volumen es: ", D_IndV, " individuos / cm3"
 	FinSi	
-	Si UsuarioEscoge < 0 o UsuarioEscoge > 4 Entonces
-			Escribir "Escoja de nuevo un valor entre 1 y 4, y ejecute de nuevo el algoritmo"
-	FinSi
-		
+
 FinAlgoritmo
-	
