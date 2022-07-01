@@ -46,16 +46,16 @@ Algoritmo ConteoXcamaraUtermohl
 		Escribir "El factor de dilución es: ", Fd
 		Escribir "¿Cúal es el diámetro de la cámara de observación en mm?"
 		Leer diamcamara
-		Ac=2*3.141618*(diamcamara/2)
+		Ac=3.141618*(diamcamara/2)^2
 		Escribir "¿Cúal es el diámetro del campo de observación en mm?"
 		Leer diamcampo
-		ap=2*3.141618*(diamcampo/2)
+		ap=3.141618*(diamcampo/2)^2
 		Escribir "¿Cúal es el número de campos que contó?"
 		Leer n2
 		Escribir "¿Cuál es el volumen sedimentado en mL?"
 		Leer v
-		N1= n2*((Ac*Fd)/(ap*v))  // Cálculo del número de célula por unidad de volumen
-		Escribir "El número de células en el total de la cámara es: ", N1
+		N1= n2*((Ac*Fd)/(ap*v))  // Cálculo del número de organismos por unidad de volumen
+		Escribir "El número de organismos en el total de la cámara es: ", N1
 		OrgL=N1*Fd/v
 		Escribir "La densidad del microzooplancton es de: ", OrgL, " Organismos por litro"	
 	FinSi
