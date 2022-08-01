@@ -1,13 +1,13 @@
 Algoritmo ConteoXcamaraUtermohl
 	Definir V Como Real // Volumen de la cámara expresado en mililitros (ml)
-	Definir Nml Como Real // Número de organismos contados por mililitros
+	Definir Nml Como Real // Número de células contados por mililitros
 	definir At Como Real // Área total de la cámara en mm2
 	Definir F Como Real // Área del campo óptico o de la cuadrícula utilizada expresada en milímetros cuadrados (mm2)
 	definir Af Como Entero //Número de campor contados
 	Definir diamcamara Como Real // Diámetro de la cámara de observación en milímetros 
 	Definir diamcampo Como Real // Diámetro del campo de observación en milímetros 
-	Definir C Como Entero // Número de organismos contados en la cámara
-	Definir OrgL Como Real // Densidad de microzooplancton.
+	Definir C Como Entero // Número de células contados en la cámara
+	Definir CelL Como Real // Densidad de microzooplancton.
 	Definir L Como Real //Longitud de la tira, mm
 	Definir Lt Como Real //Longitud total de tiras
 	Definir W Como Real //Amplitud de la tira, mm
@@ -34,10 +34,10 @@ Algoritmo ConteoXcamaraUtermohl
 	
 	Si UsuarioEscoge ==1 Entonces
 		V=3
-		Escribir "¿Cuál es el número de organismos contados en el total de la cámara?"
+		Escribir "¿Cuál es el número de células contados en el total de la cámara?"
 		Leer C
-		OrgL=C*1000/V
-		Escribir "La densidad del microzooplancton es de: ", OrgL, " Organismos por litro"
+		CelL=C*1000/V
+		Escribir "La densidad del microzooplancton es de: ", CelL, " Células por litro"
 	FinSi
 	
 	Si UsuarioEscoge ==2 Entonces
@@ -59,15 +59,15 @@ Algoritmo ConteoXcamaraUtermohl
 		FinSi
 		At=3.141618*(diamcamara/2)^2
 		F=3.141618*(diamcampo/2)^2
-		Escribir "¿Cuál es el número de organismos contados?"
+		Escribir "¿Cuál es el número de células contados?"
 		Leer C
 		Escribir "¿Cuál es el número de campos que contó?"
 		Leer Af
 		V=3
-		Nml= ((C*At)/(Af*F*V))  // Cálculo del número de organismos por unidad de volumen
-		Escribir "El número de organismos en el total de la cámara es: ", Nml
-		OrgL=Nml*1000
-		Escribir "La densidad del microzooplancton es de: ", OrgL, " Organismos por litro"	
+		Nml= ((C*At)/(Af*F*V))  // Cálculo del número de células por unidad de volumen
+		Escribir "El número de células en el total de la cámara es: ", Nml
+		CelL=Nml*1000
+		Escribir "La densidad del microzooplancton es de: ", CelL, " Células por litro"	
 	FinSi
 	
 	Si UsuarioEscoge ==3 Entonces
@@ -81,15 +81,15 @@ Algoritmo ConteoXcamaraUtermohl
 		Escribir Lt
 		Escribir "¿Cuál es la amplitud de la tira en mm?"
 		Leer W
-		Escribir "¿Cuál es el número de organismos contados?"
+		Escribir "¿Cuál es el número de células contados?"
 		Leer C
 		Escribir "¿Cuál es el diámetro de la cámara de observación en mm?"
 		Leer diamcamara
 		At=3.141618*(diamcamara/2)^2
 		V=3
-		Nml= ((C*At)/(Lt*W*S*V))  // Cálculo del número de organismos por unidad de volumen
-		Escribir "El número de organismos en el total de la cámara es: ", Nml
-		OrgL=Nml*1000
-		Escribir "La densidad del microzooplancton es de: ", OrgL, " Organismos por litro"
+		Nml= ((C*At)/(Lt*W*S*V))  // Cálculo del número de células por unidad de volumen
+		Escribir "El número de células en el total de la cámara es: ", Nml
+		CelL=Nml*1000
+		Escribir "La densidad del microzooplancton es de: ", CelL, " Células por litro"
 	FinSi
 FinAlgoritmo
