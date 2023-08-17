@@ -12,11 +12,8 @@ Algoritmo ConteoXcamaraSedgwickRafter
 	Definir C como Entero //  Número de campos contados
 	Definir Vt Como Real // Volumen de la tira expresada en milímetros cúbicos (mm3)
 	Definir T Como Entero //Número de tiras contadas
-	
-	
 	Definir v Como Real // Volumen sedimentado expresado en mililitros (ml)
 	Definir diamcamara Como Real // Diámetro de la cámara de observación en milímetros 
-	Definir CelL Como Real // Densidad de fitoplancton.
 	
 	Definir UsuarioEscoge Como Entero
 	Escribir "¿Cuál es el cálculo que va a realizar?"; 

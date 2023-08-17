@@ -37,7 +37,7 @@ Algoritmo ConteoXcamaraUtermohl
 		Escribir "¿Cuál es el número de células contados en el total de la cámara?"
 		Leer C
 		CelL=C*1000/V
-		Escribir "La densidad del microzooplancton es de: ", CelL, " Células por litro"
+		Escribir "La densidad del fitoplancton es de: ", CelL, " Células por litro"
 	FinSi
 	
 	Si UsuarioEscoge ==2 Entonces
@@ -67,7 +67,7 @@ Algoritmo ConteoXcamaraUtermohl
 		Nml= ((C*At)/(Af*F*V))  // Cálculo del número de células por unidad de volumen
 		Escribir "El número de células en el total de la cámara es: ", Nml
 		CelL=Nml*1000
-		Escribir "La densidad del microzooplancton es de: ", CelL, " Células por litro"	
+		Escribir "La densidad del fitoplancton es de: ", CelL, " Células por litro"	
 	FinSi
 	
 	Si UsuarioEscoge ==3 Entonces
@@ -90,6 +90,6 @@ Algoritmo ConteoXcamaraUtermohl
 		Nml= ((C*At)/(Lt*W*S*V))  // Cálculo del número de células por unidad de volumen
 		Escribir "El número de células en el total de la cámara es: ", Nml
 		CelL=Nml*1000
-		Escribir "La densidad del microzooplancton es de: ", CelL, " Células por litro"
+		Escribir "La densidad del fitoplancton es de: ", CelL, " Células por litro"
 	FinSi
 FinAlgoritmo
