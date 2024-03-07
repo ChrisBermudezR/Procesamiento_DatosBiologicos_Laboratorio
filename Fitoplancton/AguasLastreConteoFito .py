@@ -5,17 +5,17 @@
 from math import pi
 
 if __name__ == '__main__':
-	# número total de Células contados por mililitro
+	# numero total de Cululas contados por mililitro
 	nml = float()
-	# número de Células contados en la cámara
+	# numero de Cululas contados en la cumara
 	n = float()
-	# Número de Células por litro
+	# Numero de Cululas por litro
 	cell = float()
-	# Número de Células por mililitro
+	# Numero de Cululas por mililitro
 	celml = float()
 	# Volumen concentrado de la muestra en mililitros
 	v1 = float()
-	# Volumen total de la alícuota en mililitros
+	# Volumen total de la alucuota en mililitros
 	v2 = float()
 	# Volumen de agua filtrada por la red en litros
 	v3 = float()
@@ -28,31 +28,31 @@ if __name__ == '__main__':
 	# Radio de la red en 
 	diametrored = float()
 	# Largo total de la red
-	alturared = float()
-	print("¿Cúal es la altura de la red en cm?")
+	
+	print("Â¿CÃºal es la altura de la red en cm?")
 	alturared = float(input())
-	print("¿Cúal es el diametro de la red en cm?")
+	print("Â¿CÃºal es el diametro de la red en cm?")
 	diametrored = float(input())
 	volumenred = 1/3*pi*(diametrored/2)**2*alturared
 	volredlitros = volumenred/1000
-	print("¿Cuál es el volumen de agua filtrada por la red en litros?")
+	print("Â¿CÃºal es el volumen de agua filtrada por la red en litros?")
 	v3 = float(input())
 	volfiltradatotal = v3+volredlitros
 	print("El volumen de la red es: ",volredlitros," litros")
 	print("El volumen de agua filtrada es: ",volfiltradatotal," litros")
-	print("¿Cúantas alícuoatas contó?")
+	print("Â¿Cuantas alÃ­cuotas contÃ³?")
 	v2 = float(input())
-	print("¿Cuál es el número total de Células contados en todas las alícuotas?")
+	print("Â¿CÃºal es el numero total de CÃ©lulas contados en todas las alÃ­cuotas?")
 	n = float(input())
-	# Número promedio total de Células contados por mililitro
+	# Numero promedio total de Cululas contados por mililitro
 	nml = n/v2
-	print("El número promedio total de Células de fitoplancton contados es: ",round(nml)," Cel/mL")
-	print("¿Cuál es el volumen concentrado de la muestra en mililitros?")
+	print("El numero promedio total de Cululas de fitoplancton contados es: ",round(nml)," Cel/mL")
+	print("Â¿CÃºal es el volumen concentrado de la muestra en mililitros?")
 	v1 = float(input())
-	# Densidad de Células por litro
+	# Densidad de Cululas por litro
 	cell = (nml*v1)/(v2*volfiltradatotal)
-	# Densidad de Células por mililitro
+	# Densidad de Cululas por mililitro
 	celml = cell/1000
-	print("El resultado de la densidad de Células de fitoplancton es: ",round(cell)," Cel/L")
-	print("El resultado de la densidad de Células de fitoplancton es: ",round(celml)," Cel/ml")
+	print("El resultado de la densidad de Cululas de fitoplancton es: ",round(cell)," Cel/L")
+	print("El resultado de la densidad de Cululas de fitoplancton es: ",round(celml)," Cel/ml")
 

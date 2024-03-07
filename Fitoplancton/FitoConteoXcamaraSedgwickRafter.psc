@@ -51,7 +51,7 @@ Algoritmo ConteoXcamaraSedgwickRafter
 		Leer n
 		Escribir "¿Cuál es el diámetro del campo de observación en mm?"
 		Leer diamcampo
-		Vc=((3.141618*(diamcampo/2)^2)*1)*1000 // Este es el volumen del campo en milimetros cúbicos, para convertirlo a mililitros se debe multiplicar por 1000
+		Vc=((3.141618*(diamcampo/2)^2)*1)/1000 // Este es el volumen del campo en milimetros cúbicos, para convertirlo a mililitros se debe multiplicar por 1000
 		Escribir "¿Cuál es el número de campos que contó?"
 		Leer C
 		NmL=(n*1000)/(Vc*C) // Número promedio total de Células contados por mililitro

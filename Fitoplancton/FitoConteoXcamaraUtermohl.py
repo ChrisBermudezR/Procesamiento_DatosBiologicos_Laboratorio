@@ -4,21 +4,21 @@
 
 
 if __name__ == '__main__':
-	# Volumen de la cámara expresado en mililitros (ml)
-	v = float()
-	# Número de células contados por mililitros
+	# Volumen de la cï¿½mara expresado en mililitros (ml)
+	v = input(float())
+	# Nï¿½mero de cï¿½lulas contados por mililitros
 	nml = float()
-	# Área total de la cámara en mm2
+	# ï¿½rea total de la cï¿½mara en mm2
 	at = float()
-	# Área del campo óptico o de la cuadrícula utilizada expresada en milímetros cuadrados (mm2)
+	# ï¿½rea del campo ï¿½ptico o de la cuadrï¿½cula utilizada expresada en milï¿½metros cuadrados (mm2)
 	f = float()
-	# Número de campor contados
+	# Nï¿½mero de campor contados
 	af = int()
-	# Diámetro de la cámara de observación en milímetros 
+	# Diï¿½metro de la cï¿½mara de observaciï¿½n en milï¿½metros 
 	diamcamara = float()
-	# Diámetro del campo de observación en milímetros 
+	# Diï¿½metro del campo de observaciï¿½n en milï¿½metros 
 	diamcampo = float()
-	# Número de células contados en la cámara
+	# Nï¿½mero de cï¿½lulas contados en la cï¿½mara
 	c = int()
 	# Densidad de microzooplancton.
 	cell = float()
@@ -28,78 +28,78 @@ if __name__ == '__main__':
 	lt = float()
 	# Amplitud de la tira, mm
 	w = float()
-	# Número de tiras contadas
+	# Nï¿½mero de tiras contadas
 	s = int()
 	usuarioescoge = int()
 	# Contador
 	contador = int()
 	lt = 0
 	contador = 0
-	print("¿Cuál es el cálculo que va a realizar?")
-	print("Escoja un número:")
-	print("1. Cálculo de cámara completa")
-	print("2. Cálculo por campos")
+	print("ï¿½Cuï¿½l es el cï¿½lculo que va a realizar?")
+	print("Escoja un nï¿½mero:")
+	print("1. Cï¿½lculo de cï¿½mara completa")
+	print("2. Cï¿½lculo por campos")
 	print("3. Conteo por tiras")
-	print("Digite su selección: ")
+	print("Digite su selecciï¿½n: ")
 	usuarioescoge = int(input())
 	if usuarioescoge<1 or usuarioescoge>3:
 		while True:# no hay 'repetir' en python
-			print("Escoja de nuevo un valor entre 1 y 3 y digítelo:")
+			print("Escoja de nuevo un valor entre 1 y 3 y digï¿½telo:")
 			usuarioescoge = int(input())
 			if usuarioescoge>0 and usuarioescoge<4: break
 	if usuarioescoge==1:
 		v = 3
-		print("¿Cuál es el número de células contados en el total de la cámara?")
+		print("ï¿½Cuï¿½l es el nï¿½mero de cï¿½lulas contados en el total de la cï¿½mara?")
 		c = int(input())
 		cell = c*1000/v
-		print("La densidad del microzooplancton es de: ",cell," Células por litro")
+		print("La densidad del microzooplancton es de: ",cell," Cï¿½lulas por litro")
 	if usuarioescoge==2:
-		print("¿Cuál es el diámetro de la cámara de observación en mm?")
+		print("ï¿½Cuï¿½l es el diï¿½metro de la cï¿½mara de observaciï¿½n en mm?")
 		diamcamara = float(input())
-		print("¿Cuál es el área del campo de observación en mm?")
+		print("ï¿½Cuï¿½l es el ï¿½rea del campo de observaciï¿½n en mm?")
 		diamcampo = float(input())
 		if diamcampo>diamcamara:
 			while True:# no hay 'repetir' en python
-				print("El valor del diámetro del campo debe ser menor que el diámetro de la cámara, los valores que usted ingresó son:")
-				print("Diámetro de cámara: ",diamcamara)
-				print(" Diámetro de campo: ",diamcampo)
+				print("El valor del diï¿½metro del campo debe ser menor que el diï¿½metro de la cï¿½mara, los valores que usted ingresï¿½ son:")
+				print("Diï¿½metro de cï¿½mara: ",diamcamara)
+				print(" Diï¿½metro de campo: ",diamcampo)
 				print("Por favor digite de nuevo los valores")
-				print("¿Cuál es el diámetro de la cámara de observación en mm?")
+				print("ï¿½Cuï¿½l es el diï¿½metro de la cï¿½mara de observaciï¿½n en mm?")
 				diamcamara = float(input())
-				print("¿Cuál es el área del campo de observación en mm?")
+				print("ï¿½Cuï¿½l es el ï¿½rea del campo de observaciï¿½n en mm?")
 				diamcampo = float(input())
 				if diamcampo<diamcamara: break
 		at = 3.141618*(diamcamara/2)**2
 		f = 3.141618*(diamcampo/2)**2
-		print("¿Cuál es el número de células contados?")
+		print("ï¿½Cuï¿½l es el nï¿½mero de cï¿½lulas contados?")
 		c = int(input())
-		print("¿Cuál es el número de campos que contó?")
+		print("ï¿½Cuï¿½l es el nï¿½mero de campos que contï¿½?")
 		af = int(input())
 		v = 3
-		# Cálculo del número de células por unidad de volumen
+		# Cï¿½lculo del nï¿½mero de cï¿½lulas por unidad de volumen
 		nml = ((c*at)/(af*f*v))
-		print("El número de células en el total de la cámara es: ",nml)
+		print("El nï¿½mero de cï¿½lulas en el total de la cï¿½mara es: ",nml)
 		cell = nml*1000
-		print("La densidad del microzooplancton es de: ",cell," Células por litro")
+		print("La densidad del microzooplancton es de: ",cell," Cï¿½lulas por litro")
 	if usuarioescoge==3:
-		print("¿Cuántas tiras contó?")
+		print("ï¿½Cuï¿½ntas tiras contï¿½?")
 		s = int(input())
 		for contador in range(1,s+1):
-			print("¿Cuál es la longitud de la tira ",contador," en mm?")
+			print("ï¿½Cuï¿½l es la longitud de la tira ",contador," en mm?")
 			l = float(input())
 			lt = lt+l
 		print(lt)
-		print("¿Cuál es la amplitud de la tira en mm?")
+		print("ï¿½Cuï¿½l es la amplitud de la tira en mm?")
 		w = float(input())
-		print("¿Cuál es el número de células contados?")
+		print("ï¿½Cuï¿½l es el nï¿½mero de cï¿½lulas contados?")
 		c = int(input())
-		print("¿Cuál es el diámetro de la cámara de observación en mm?")
+		print("ï¿½Cuï¿½l es el diï¿½metro de la cï¿½mara de observaciï¿½n en mm?")
 		diamcamara = float(input())
 		at = 3.141618*(diamcamara/2)**2
 		v = 3
-		# Cálculo del número de células por unidad de volumen
+		# Cï¿½lculo del nï¿½mero de cï¿½lulas por unidad de volumen
 		nml = ((c*at)/(lt*w*s*v))
-		print("El número de células en el total de la cámara es: ",nml)
+		print("El nï¿½mero de cï¿½lulas en el total de la cï¿½mara es: ",nml)
 		cell = nml*1000
-		print("La densidad del microzooplancton es de: ",cell," Células por litro")
+		print("La densidad del microzooplancton es de: ",cell," Cï¿½lulas por litro")
 
